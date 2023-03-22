@@ -4,7 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:foregroundTint="#AA4747"
+    tools:context=".NewActivity">
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:text="kai@gmail.com"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="155dp" />
 
     <TextView
         android:id="@+id/textView4"
@@ -31,11 +41,11 @@
         android:id="@+id/imageView3"
         android:layout_width="476dp"
         android:layout_height="758dp"
-        android:layout_marginTop="-20dp"
+        android:layout_marginTop="66dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/background_vineyard" />
 
     <TextView
@@ -48,22 +58,51 @@
         android:textColor="#7C2A2A"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-    <AutoCompleteTextView
-        android:id="@+id/autoCompleteTextView"
-        android:layout_width="300dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/search_background"
-        android:drawableStart="@android:drawable/ic_menu_search"
-        android:drawablePadding="10dp"
-        android:hint="Suchen sie ihren Wein"
-        android:paddingStart="10dp"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="130dp"
+        android:layout_height="206dp"
+        android:layout_marginStart="44dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.443"
+        app:srcCompat="@drawable/logo_Rotwein" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="412dp"
+        android:backgroundTint="#7C2A2A"
+        android:text="Rotweine"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="53dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="130dp"
+        android:layout_height="206dp"
+        android:layout_marginBottom="292dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:srcCompat="@drawable/logo_weisswein" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:backgroundTint="#7C2A2A"
+        android:text="WeiSSweine"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        tools:layout_editor_absoluteX="237dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
