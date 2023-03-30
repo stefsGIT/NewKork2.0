@@ -7,15 +7,6 @@
     android:foregroundTint="#AA4747"
     tools:context=".NewActivity">
 
-    <EditText
-        android:id="@+id/editTextEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:text="kai@gmail.com"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="155dp" />
-
     <TextView
         android:id="@+id/textView4"
         android:layout_width="411dp"
@@ -75,34 +66,36 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="44dp"
         android:layout_marginTop="412dp"
         android:backgroundTint="#7C2A2A"
         android:text="Rotweine"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="53dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="130dp"
         android:layout_height="206dp"
-        android:layout_marginBottom="292dp"
+        android:layout_marginEnd="44dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.44"
         app:srcCompat="@drawable/logo_weisswein" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="412dp"
+        android:layout_marginEnd="44dp"
         android:backgroundTint="#7C2A2A"
         android:text="WeiSSweine"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
-        tools:layout_editor_absoluteX="237dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
