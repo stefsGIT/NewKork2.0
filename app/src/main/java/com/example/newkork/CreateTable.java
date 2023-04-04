@@ -1,7 +1,7 @@
 package com.example.newkork;
 
 public class CreateTable {
-    public CreateTable(Database db){
+    public Database loadData(Database db){
 
         db.add("Riesling", "Trockene Weißweine");
         db.add("Silvaner", "Trockene Weißweine");
@@ -49,5 +49,7 @@ public class CreateTable {
         db.add("Frühroter Veltliner", "Leichte Rotweine");
         db.add("Rondo", "Leichte Rotweine");
         db.add("Pinot Meunier", "Leichte Rotweine");
+
+        return (db);
     }
 }

@@ -20,6 +20,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".GerichtActivity"
+            android:label="Waehle Gericht"
+            android:parentActivityName=".MainActivity"
+        />
+        <activity
+            android:name=".NewActivity"
+            android:label="Waehle Gericht"
+            android:parentActivityName=".MainActivity"
+            />
     </application>
 
 </manifest>

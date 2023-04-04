@@ -1,10 +1,14 @@
 package com.example.newkork;
 
+import static android.app.ProgressDialog.show;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-    public class Database extends SQLiteOpenHelper {
+import android.widget.Toast;
+
+public class Database extends SQLiteOpenHelper {
 
         private Context context;
         private static final String DATABASE_NAME = "wine.db";
@@ -20,7 +24,7 @@ import android.database.sqlite.SQLiteOpenHelper;
                         TABLE_NAME +
                         "(" +
                         COLUMN_ID +
-                        "integer primary key autoincrement, " +
+                        " integer primary key autoincrement, " +
                         COLUMN_TITLE +
                         " text not null, " +
                         COLUMN_TYPE +
@@ -40,18 +44,21 @@ import android.database.sqlite.SQLiteOpenHelper;
         @Override
         public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
             sqLiteDatabase.execSQL("drop table if exists " + TABLE_NAME);
+            onCreate(sqLiteDatabase);
         }
 
         void add(String title, String type){
             SQLiteDatabase db = this.getWritableDatabase();
             ContentValues cv = new ContentValues();
 
-            cv.put(COLUMN_ID, title);
+            cv.put(COLUMN_TITLE, title);
             cv.put(COLUMN_TYPE, type);
-
-/*        long result = db.insert(TABLE_NAME, null, cv);
-        if(result == -1){
-            Toast.makeText(context, text: "Failed", Toast.LENGTH_SHORT);
-        }*/
+            long result = db.insert(TABLE_NAME, null, cv);
+            if(result == -1) {
+                Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
+            }
+            else {
+                Toast.makeText(context, "Succsessfull", Toast.LENGTH_SHORT).show();
+            }
         }
 }
