@@ -22,7 +22,7 @@ public class DatabaseRecept extends SQLiteOpenHelper {
     private static final String COLUMN_RECIPE = "recipe";
     private static final String COLUMN_VEGI = "recipeVegi";
     private static final String COLUMN_RECIPETYPE = "recipeType";
-    private static final String COLUMN_WINETYPE = "recipeType";
+    private static final String COLUMN_WINETYPE = "wineType";
 
     public static final String SQL_Create =
             "create table " +
@@ -67,7 +67,7 @@ public class DatabaseRecept extends SQLiteOpenHelper {
         cv.put(COLUMN_TITLE, title);
         cv.put(COLUMN_INGREDIENTS, ingreds);
         cv.put(COLUMN_RECIPE, recipes);
-        cv.put(COLUMN_RECIPE, vegi);
+        cv.put(COLUMN_VEGI, vegi);
         cv.put(COLUMN_RECIPETYPE, recipetype);
         cv.put(COLUMN_WINETYPE, winetype);
         long result = db.insert(TABLE_NAME, null, cv);
