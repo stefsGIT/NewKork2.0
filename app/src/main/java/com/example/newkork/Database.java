@@ -4,6 +4,7 @@ import static android.app.ProgressDialog.show;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
@@ -60,5 +61,15 @@ public class Database extends SQLiteOpenHelper {
             else {
                 Toast.makeText(context, "Succsessfull", Toast.LENGTH_SHORT).show();
             }
+        }
+
+        Cursor readData(){
+            String querry = "SELECT * FROM " + TABLE_NAME;
+            SQLiteDatabase db = this.getReadableDatabase();
+            Cursor cursor = null;
+            if(db != null){
+                cursor = db.rawQuery(querry, null );
+            }
+            return cursor;
         }
 }
