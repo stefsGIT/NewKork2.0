@@ -79,30 +79,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Zurueck2" />
 
-
-    <androidx.recyclerview.widget.RecyclerView
+    <Button
+        android:id="@+id/suchewein_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="12dp"
-        tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="401dp" />
-
-    <TextView
-                android:íd="@+id/wine_id_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:textColor="#000"
-            app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-
-        />
-
-
-
+        android:text="Suchen"
+        tools:layout_editor_absoluteX="144dp"
+        tools:layout_editor_absoluteY="453dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
