@@ -67,7 +67,7 @@ public class DatabaseRecept extends SQLiteOpenHelper {
         cv.put(COLUMN_TITLE, title);
         cv.put(COLUMN_INGREDIENTS, ingreds);
         cv.put(COLUMN_RECIPE, recipes);
-        cv.put(COLUMN_RECIPE, vegi);
+        cv.put(COLUMN_VEGI, vegi);
         cv.put(COLUMN_RECIPETYPE, recipetype);
         cv.put(COLUMN_WINETYPE, winetype);
         long result = db.insert(TABLE_NAME, null, cv);
