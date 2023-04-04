@@ -10,7 +10,7 @@
         android:id="@+id/Zurueck"
         android:layout_width="130dp"
         android:layout_height="48dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:backgroundTint="#7C2A2A"
         android:text="Zurück"
         app:layout_constraintEnd_toEndOf="parent"

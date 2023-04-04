@@ -64,7 +64,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Vegi" />
+        app:layout_constraintTop_toBottomOf="@+id/Rotwein" />
 
     <Button
         android:id="@+id/Rotwein"
@@ -81,7 +81,7 @@
         android:id="@+id/Suchen"
         android:layout_width="130dp"
         android:layout_height="48dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="25dp"
         android:backgroundTint="#7C2A2A"
         android:text="Suchen"
         app:layout_constraintEnd_toEndOf="parent"
