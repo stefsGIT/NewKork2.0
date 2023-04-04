@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        weiswein_button.setOnClickListener(new View.OnClickListener() {
+        suche_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, NewActivity.class);
                 startActivity(intent);
