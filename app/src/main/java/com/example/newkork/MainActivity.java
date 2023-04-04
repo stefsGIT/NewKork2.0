@@ -17,19 +17,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Database Weine = new Database(MainActivity.this);
-        CreateTable Loader = new CreateTable();
+        DatabaseRecept Recipe= new DatabaseRecept(MainActivity.this);
+
+        CreateTable LoaderW = new CreateTable();
+        createRecipeTable LoaderR = new createRecipeTable();
 
         Cursor cursorW = Weine.readData();
         if (cursorW.getCount()==0){
-            Weine = Loader.loadData(Weine);
+            Weine = LoaderW.loadData(Weine);
         }
-        Cursor cursorR = Weine.readData();
+        Cursor cursorR = Recipe.readData();
         if (cursorR.getCount()==0){
-            Weine = Loader.loadData(Weine);
+            Recipe = LoaderR.loadData(Recipe);
         }
 
-        rotwein_button = findViewById(R.id.Vegi);
-        weiswein_button = findViewById(R.id.Fleisch);
+        rotwein_button = findViewById(R.id.Weiswein);
+        weiswein_button = findViewById(R.id.Rotwein);
         suche_button = findViewById(R.id.Suchen);
 
         rotwein_button.setOnClickListener(new View.OnClickListener() {
@@ -40,6 +43,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
         weiswein_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, GerichtActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        suche_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, NewActivity.class);
                 startActivity(intent);
