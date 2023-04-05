@@ -14,6 +14,7 @@ public class NewActivity extends AppCompatActivity{
         setContentView(R.layout.activity_new);
 
         Button zurueck_button;
+        Button suchewein_button;
 
         zurueck_button = findViewById(R.id.Zurueck2);
         zurueck_button.setOnClickListener(new View.OnClickListener() {
@@ -22,5 +23,16 @@ public class NewActivity extends AppCompatActivity{
                 startActivity(intent);
             }
         });
+
+        suchewein_button = findViewById(R.id.suchewein_button);
+
+        suchewein_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent1 = new Intent(NewActivity.this, WeinAnzeigen.class);
+                startActivity(intent1);
+            }
+        });
+
+
     }
 }
