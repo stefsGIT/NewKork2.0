@@ -8,53 +8,72 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="12dp">
+        android:layout_margin="1dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true">
 
-        <TextView
-            android:id="@+id/wineID_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1"
-            android:textColor="#000"
-            android:textSize="40sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/wineName_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:text="Name"
-            android:textColor="#000"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/wineID_text"
-            app:layout_constraintTop_toTopOf="@+id/wineID_text" />
-
-        <TextView
-            android:id="@+id/wineType_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="wineType"
-            app:layout_constraintStart_toStartOf="@+id/wineName_text"
-            app:layout_constraintTop_toBottomOf="@+id/wineName_text" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline"
-            android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.05109489" />
+            android:padding="16dp"
+            android:id="@+id/linearLayout">
 
+            <TextView
+                android:id="@+id/wineID_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="#000"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_conversion_absoluteHeight="53dp"
+                tools:layout_editor_absoluteY="40dp"
+                tools:layout_editor_absoluteX="38dp"
+                tools:layout_conversion_absoluteWidth="23dp" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/wineName_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Name"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/wineID_text"
+                app:layout_constraintTop_toTopOf="@+id/wineID_text"
+                tools:layout_conversion_absoluteHeight="27dp"
+                tools:layout_conversion_absoluteWidth="116dp" />
+
+            <TextView
+                android:id="@+id/wineType_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="wineType"
+                app:layout_constraintStart_toStartOf="@+id/wineName_text"
+                app:layout_constraintTop_toBottomOf="@+id/wineName_text"
+                tools:layout_conversion_absoluteHeight="19dp"
+                tools:layout_editor_absoluteY="121dp"
+                tools:layout_editor_absoluteX="38dp"
+                tools:layout_conversion_absoluteWidth="60dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05109489"
+                tools:layout_conversion_absoluteHeight="0dp"
+                tools:layout_editor_absoluteY="24dp"
+                tools:layout_editor_absoluteX="22dp"
+                tools:layout_conversion_absoluteWidth="0dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 </LinearLayout>

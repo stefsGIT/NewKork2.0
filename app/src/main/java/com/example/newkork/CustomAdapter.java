@@ -16,7 +16,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     private Context context;
     private Activity activity;
-    private ArrayList wineID, wineName, wineType;
+    private ArrayList<String> wineID, wineName, wineType;
 
     CustomAdapter(Activity activity, Context context,  ArrayList wineID, ArrayList wineName, ArrayList wineType){
 
@@ -37,8 +37,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CustomAdapter.MyViewHolder holder, int position) {
-            holder.wineID_text.setText(String.valueOf(wineID.get(position)));
+    public void onBindViewHolder(@NonNull CustomAdapter.MyViewHolder holder, int position) {holder.wineID_text.setText(String.valueOf(wineID.get(position)));
         holder.wineName_text.setText(String.valueOf(wineName.get(position)));
         holder.wineType_text.setText(String.valueOf(wineType.get(position)));
     }

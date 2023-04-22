@@ -31,12 +31,6 @@
             android:parentActivityName=".MainActivity"
             />
 
-        <activity
-            android:name=".WeinAnzeigen"
-            android:label="Weinliste"
-            android:parentActivityName=".NewActivity"
-            />
-
     </application>
 
 </manifest>
